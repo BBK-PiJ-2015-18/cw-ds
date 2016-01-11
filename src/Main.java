@@ -8,6 +8,15 @@ public class Main {
 
         LinkedListTest linkedListTest = new LinkedListTest();
         linkedListTest.run();
+
+        FunctionalArrayListTest functionalArrayListTest = new FunctionalArrayListTest();
+        functionalArrayListTest.run();
+
+        FunctionalLinkedListTest functionalLinkedListTest = new FunctionalLinkedListTest();
+        functionalLinkedListTest.run();
+
+        SampleableLinkedListTest sampleableLinkedListTest = new SampleableLinkedListTest();
+        sampleableLinkedListTest.run();
     }
 
     private static void testReturnObjectImpl() {

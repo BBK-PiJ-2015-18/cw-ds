@@ -6,7 +6,7 @@ public abstract class ListTester {
         this.list = list;
     }
 
-    public void runImpl() {
+    protected void runImpl() {
         testEmptyArray();
         testSimpleAdd();
         testAdvancedAdd();
@@ -14,7 +14,7 @@ public abstract class ListTester {
         testRemove();
     }
 
-    private List createInstance() {
+    protected List createInstance() {
         String name = list.getClass().getName();
         List newInstance = null;
         try {
