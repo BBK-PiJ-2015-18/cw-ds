@@ -89,8 +89,6 @@ public class ArrayList implements List {
 
         items[index] = item;
 
-        size++;
-
         return new ReturnObjectImpl(null);
     }
 

@@ -58,6 +58,8 @@ public abstract class ListTester {
         ReturnObject result2 = arrayList.add(item);
         ReturnObject result3 = arrayList.add(item);
 
+        Assert.equals(arrayList.size(), 3);
+
         Assert.equals(result.getError(), ErrorMessage.NO_ERROR);
         Assert.equals(arrayList.get(0).getReturnValue(), item);
 
@@ -69,9 +71,14 @@ public abstract class ListTester {
         Assert.equals(arrayList.get(2).getReturnValue(), item);
 
         char newItem = 'B';
-
         ReturnObject result4 = arrayList.add(2, newItem);
         Assert.equals(arrayList.get(2).getReturnValue(), newItem);
+        Assert.equals(arrayList.size(), 3);
+
+        String newItem2 = "Blah502349";
+        ReturnObject result5 = arrayList.add(2, newItem2);
+        Assert.equals(arrayList.get(2).getReturnValue(), newItem2);
+        Assert.equals(arrayList.size(), 3);
     }
 
     private void testLargeAdd() {
