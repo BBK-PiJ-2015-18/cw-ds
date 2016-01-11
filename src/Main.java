@@ -17,6 +17,12 @@ public class Main {
 
         SampleableLinkedListTest sampleableLinkedListTest = new SampleableLinkedListTest();
         sampleableLinkedListTest.run();
+
+        StackImplTest stackImplTest = new StackImplTest();
+        stackImplTest.run();
+
+        ImprovedStackImplTest improvedStackImplTest = new ImprovedStackImplTest();
+        improvedStackImplTest.run();
     }
 
     private static void testReturnObjectImpl() {
