@@ -1,5 +1,3 @@
-import com.sun.tools.javac.util.Assert;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -7,6 +5,9 @@ public class Main {
 
         ArrayListTest arrayListTest = new ArrayListTest();
         arrayListTest.run();
+
+        LinkedListTest linkedListTest = new LinkedListTest();
+        linkedListTest.run();
     }
 
     private static void testReturnObjectImpl() {

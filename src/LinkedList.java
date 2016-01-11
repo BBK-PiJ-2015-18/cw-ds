@@ -46,7 +46,7 @@ public class LinkedList implements List {
             node = node.getNext();
         }
 
-        return new ReturnObjectImpl(node);
+        return new ReturnObjectImpl(node.getData());
     }
 
     @Override
@@ -60,15 +60,17 @@ public class LinkedList implements List {
         }
 
         Node node = head;
-        for (int i = 0; i < index; i++) {
+        for (int i = 0; i < index - 1; i++) {
             node = node.getNext();
         }
 
         Node toRemove = node.getNext();
-        node.setNext(toRemove.getNext());
+        if (toRemove.hasNext()) {
+            node.setNext(toRemove.getNext());
+        }
         size--;
 
-        return new ReturnObjectImpl(toRemove);
+        return new ReturnObjectImpl(toRemove.getData());
     }
 
     @Override
@@ -112,6 +114,7 @@ public class LinkedList implements List {
 
         if (head == null) {
             head = newNode;
+            size++;
             return new ReturnObjectImpl(null);
         }
 

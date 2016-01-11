@@ -1,5 +1,9 @@
-public class LinkedListTest {
+public class LinkedListTest extends ListTester {
     public LinkedListTest() {
-        // Test around size - this shouldn't be incremented when performing add(i, item)
+        super(new LinkedList());
+    }
+
+    public void run() {
+        runImpl();
     }
 }
